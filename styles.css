@@ -123,9 +123,44 @@ body {
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1.5; }
-  50% { opacity: 0.7; }
+  0%, 100% { border: 2px solid #00ffcc; }
+  50% { border: 2px solid #ff00cc; }
 }
+
+/* Winner animation for 'O' */
+.cell.winner.o::before {
+  animation: blinkO 0.7s infinite;
+}
+
+@keyframes blinkO {
+  0%, 100% {
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+    color: #00ffcc;
+  }
+  50% {
+    text-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+    color: white;
+  }
+}
+
+/* Winner animation for 'X' */
+.cell.winner.x::before {
+  animation: blinkX 0.7s infinite;
+}
+
+@keyframes blinkX {
+  0%, 100% {
+    text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
+    color: #ff00cc;
+  }
+  50% {
+    text-shadow: 0 0 20px #ff00cc, 0 0 40px #ff00cc;
+    color: white;
+  }
+}
+
+
+
 
 .winner-banner {
   margin-top: 20px;
