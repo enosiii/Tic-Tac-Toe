@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Add manifest -->
+  <link rel="manifest" href="manifest.json">
+  <!-- Theme color for PWA -->
+  <meta name="theme-color" content="#00ffcc">
+</head>
+<body>
+  <div class="game-container">
+    <div class="mode-selection" id="mode-selection">
+      <button id="two-player-mode">2-Player</button>
+      <button id="vs-computer-mode">VS Computer</button>
+    </div>
+    <div class="game-status" id="game-status"></div>
+    <div class="who-plays-first hidden" id="who-plays-first">
+      <button id="toggle-first-player" class="o">
+        Who plays first?<br>(Tap to change)<br><span id="current-player">O</span>
+      </button>
+    </div>
+    <div><button class="change-mode hidden" id="change-mode">Change Mode</button></div>
+    <div class="turn-status" id="turn-status"></div>
+    <div class="board hidden" id="board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+    <div class="winner-banner hidden" id="winner-banner"></div>
+    <button class="play-again hidden" id="play-again">Play Again</button>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="mode.js"></script>
+  <!-- Register service worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/Tic-Tac-Toe/sw.js')
+        .then((registration) => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch((error) => {
+          console.error('Service Worker registration failed:', error);
+        });
+    }
+  </script>
+
+<audio id="game-win-sound" src="/Tic-Tac-Toe/game-win.mp3"></audio>
+<audio id="game-over-sound" src="/Tic-Tac-Toe/game-over.mp3"></audio>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "Tic Tac Toe",
+  "short_name": "TicTacToe",
+  "description": "A fun and interactive Tic Tac Toe game with 2-player and VS Computer modes.",
+  "start_url": "/Tic-Tac-Toe/",
+  "scope": "/Tic-Tac-Toe/",
+  "id": "/Tic-Tac-Toe/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#00ffcc",
+  "icons": [
+    {
+      "src": "ttt192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "ttt512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

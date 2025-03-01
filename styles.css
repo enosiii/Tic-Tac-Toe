@@ -1,0 +1,253 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #1a1a1a;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+.game-container {
+  text-align: center;
+}
+
+.mode-selection button {
+  background: none;
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
+  font-size: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+.mode-selection button:hover {
+  background: #00ffcc;
+  color: #1a1a1a;
+}
+
+.who-plays-first {
+  margin-bottom: 20px;
+}
+
+.who-plays-first button {
+  background: none;
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
+  font-size: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.who-plays-first button.o {
+  border-color: #00ffcc;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.who-plays-first button.x {
+  border-color: #ff00cc;
+  color: #ff00cc;
+  text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
+}
+
+.who-plays-first button.o:hover {
+  background: #00ffcc;
+  color: #1a1a1a;
+}
+
+.who-plays-first button.x:hover {
+  background: #ff00cc;
+  color: #1a1a1a;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #2a2a2a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #00ffcc;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.cell.o::before {
+  content: '○';
+  font-size: 120px;
+  margin-bottom: 15px;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.cell.x::before {
+  content: '×';
+  font-size: 120px;
+  margin-bottom: 15px;
+  color: #ff00cc;
+  text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
+}
+
+.cell.winner {
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1.5; }
+  50% { opacity: 0.7; }
+}
+
+.winner-banner {
+  margin-top: 20px;
+  font-size: 24px;
+  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+}
+
+.winner-banner.o {
+  color: #00ffcc;
+}
+
+.winner-banner.x {
+  color: #ff00cc;
+}
+
+.play-again {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background: #00ffcc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.play-again:hover {
+  background: #00ccaa;
+}
+
+.hidden {
+  display: none;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+
+/* Add these styles to your CSS */
+.game-status {
+  font-size: 24px;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+  margin-bottom: 10px;
+}
+
+.change-mode {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background: #ff00cc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.change-mode:hover {
+  background: #cc00aa;
+}
+
+.turn-status {
+  font-size: 20px;
+  color: #ff00cc; /* Default color */
+  text-shadow: 0 0 10px #ff00cc;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid #ff00cc; /* Default border color */
+  border-radius: 10px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  opacity: 1; /* Ensure it's visible when not hidden */
+}
+
+.turn-status.hidden {
+  display: none; /* Hide the element */
+}
+
+.turn-status.o-turn {
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+  border-color: #00ffcc;
+}
+
+.turn-status.x-turn {
+  color: #ff00cc;
+  text-shadow: 0 0 10px #ff00cc;
+  border-color: #ff00cc;
+}
+
+
+/* Responsive Design for PC */
+@media (min-width: 600px) {
+  .game-status {
+    font-size: 32px;
+  }
+  
+  .turn-status {
+    font-size: 24px;
+    padding: 15px;
+  }
+  
+  .change-mode {
+    font-size: 24px;
+    padding: 15px 30px;
+  }
+
+  .board {
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+  }
+
+  .cell {
+    width: 150px;
+    height: 150px;
+  }
+
+  .cell.o::before, .cell.x::before {
+    font-size: 150px;
+  }
+
+  .who-plays-first button {
+    font-size: 24px;
+    padding: 15px 30px;
+  }
+
+  .winner-banner {
+    font-size: 32px;
+  }
+
+  .play-again {
+    font-size: 24px;
+    padding: 15px 30px;
+  }
+}
+
