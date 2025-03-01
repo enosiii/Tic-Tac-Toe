@@ -1,6 +1,8 @@
 
 # Tic Tac Toe 🎮
 
+Visit the live site here: [Tic-Tac-Toe](https://enosiii.github.io/Tic-Tac-Toe/)
+
 ## Tic-Tac-Toe game needs a winner, no more draws.
 
 A fun and interactive Tic Tac Toe game with **2-Player** and **VS Computer** modes, built as a **Progressive Web App (PWA)**. Play offline, enjoy sound effects, and experience a seamless gaming experience!
