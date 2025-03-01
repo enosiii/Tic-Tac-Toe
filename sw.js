@@ -9,6 +9,7 @@ const ASSETS = [
   '/Tic-Tac-Toe/manifest.json',
   '/Tic-Tac-Toe/ttt192.png',
   '/Tic-Tac-Toe/ttt512.png',
+  '/Tic-Tac-Toe/tick.mp3',
   '/Tic-Tac-Toe/game-win.mp3',
   '/Tic-Tac-Toe/game-over.mp3'
 ];
