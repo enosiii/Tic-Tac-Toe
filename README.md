@@ -8,7 +8,7 @@ A fun and interactive Tic Tac Toe game with **2-Player** and **VS Computer** mod
 [![GitHub license](https://img.shields.io/github/license/enosiii/Tic-Tac-Toe)](https://github.com/enosiii/Tic-Tac-Toe/blob/main/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/enosiii/Tic-Tac-Toe)](https://github.com/enosiii/Tic-Tac-Toe/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/enosiii/Tic-Tac-Toe)](https://github.com/enosiii/Tic-Tac-Toe/issues)
-[![GitHub forks](https://img.shields.io/github/forks/your-username/Tic-Tac-Toe)](https://github.com/your-username/Tic-Tac-Toe/network)
+[![GitHub forks](https://img.shields.io/github/forks/enosiii/Tic-Tac-Toe)](https://github.com/enosiii/Tic-Tac-Toe/network)
 
 ## 🙏 Support
 
